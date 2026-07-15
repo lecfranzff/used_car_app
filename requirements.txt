@@ -1,0 +1,17 @@
+# Runtime dependencies for the Streamlit app, pinned to the exact versions the
+# deployment pipeline (models/xgb_deployment_pipeline.joblib) was trained and
+# pickled under. joblib pickles are version-coupled: a mismatch in
+# numpy / scipy / scikit-learn / xgboost can break loading or silently misbehave.
+#
+# IMPORTANT: deploy on Python 3.14 (Streamlit Community Cloud -> Advanced settings
+# at first deploy) so these wheels resolve and match the training interpreter.
+# Versions verified against models/xgb_deployment_metadata.json and the training venv.
+streamlit==1.56.0
+pandas==3.0.2
+numpy==2.4.4
+scipy==1.17.1
+scikit-learn==1.8.0
+xgboost==3.3.0
+joblib==1.5.3
+pyarrow==23.0.1
+altair==6.0.0

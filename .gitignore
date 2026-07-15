@@ -1,0 +1,39 @@
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Datasets ---
+# Large source/intermediate data, not needed at runtime. The app serves
+# precomputed aggregates from models/*.json, and NB03 reads these locally.
+data/
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Secrets ---
+.env
+.streamlit/secrets.toml
+
+# --- Project working docs (not part of the deployed app) ---
+CONTEXT.md
+
+# --- Model artifacts ---
+# Exclude everything in models/, then re-include ONLY the deploy-needed files.
+# This keeps the 4.9 GB random_forest_best_pipeline.joblib and the CUDA
+# xgb_gpu_pipeline.joblib out of the repo (GitHub's 100 MB hard limit; avoids
+# bloating the Streamlit Community Cloud clone).
+models/*
+!models/xgb_deployment_pipeline.joblib
+!models/xgb_deployment_metadata.json
+!models/dashboard_aggregates.json
+!models/form_options.json

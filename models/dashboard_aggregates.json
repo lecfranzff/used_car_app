@@ -1,0 +1,531 @@
+{
+  "price_distribution": {
+    "bin_edges": [
+      800.0,
+      2927.2,
+      5054.4,
+      7181.599999999999,
+      9308.8,
+      11436.0,
+      13563.199999999999,
+      15690.399999999998,
+      17817.6,
+      19944.8,
+      22072.0,
+      24199.199999999997,
+      26326.399999999998,
+      28453.6,
+      30580.799999999996,
+      32707.999999999996,
+      34835.2,
+      36962.399999999994,
+      39089.6,
+      41216.799999999996,
+      43344.0,
+      45471.2,
+      47598.399999999994,
+      49725.6,
+      51852.799999999996,
+      53979.99999999999,
+      56107.2,
+      58234.399999999994,
+      60361.59999999999,
+      62488.799999999996,
+      64615.99999999999,
+      66743.2,
+      68870.4,
+      70997.59999999999,
+      73124.79999999999,
+      75252.0,
+      77379.2,
+      79506.4,
+      81633.59999999999,
+      83760.79999999999,
+      85888.0
+    ],
+    "counts": [
+      878,
+      5663,
+      10785,
+      14831,
+      18328,
+      23341,
+      26482,
+      28331,
+      28517,
+      26995,
+      20570,
+      20778,
+      17970,
+      17381,
+      10756,
+      10301,
+      10499,
+      9780,
+      7183,
+      6232,
+      5660,
+      5120,
+      4438,
+      3858,
+      3028,
+      2620,
+      2089,
+      2381,
+      1260,
+      1302,
+      1383,
+      1057,
+      1284,
+      758,
+      682,
+      511,
+      487,
+      553,
+      364,
+      417
+    ]
+  },
+  "overall": {
+    "count": 358434,
+    "median_price": 21900.0,
+    "mean_price": 26020.76
+  },
+  "price_by_make": {
+    "ford": {
+      "count": 35333,
+      "median_price": 22800.0,
+      "mean_price": 26679.73
+    },
+    "nissan": {
+      "count": 30992,
+      "median_price": 17998.0,
+      "mean_price": 19231.58
+    },
+    "toyota": {
+      "count": 27871,
+      "median_price": 19995.0,
+      "mean_price": 22479.55
+    },
+    "hyundai": {
+      "count": 27840,
+      "median_price": 16995.0,
+      "mean_price": 17828.79
+    },
+    "honda": {
+      "count": 27185,
+      "median_price": 19834.0,
+      "mean_price": 21065.72
+    },
+    "chevrolet": {
+      "count": 24737,
+      "median_price": 18500.0,
+      "mean_price": 23861.38
+    },
+    "kia": {
+      "count": 19568,
+      "median_price": 16495.0,
+      "mean_price": 17387.72
+    },
+    "dodge": {
+      "count": 15833,
+      "median_price": 17999.0,
+      "mean_price": 21447.3
+    },
+    "jeep": {
+      "count": 15523,
+      "median_price": 30741.0,
+      "mean_price": 32161.2
+    },
+    "volkswagen": {
+      "count": 15062,
+      "median_price": 20749.5,
+      "mean_price": 21519.13
+    },
+    "mazda": {
+      "count": 14858,
+      "median_price": 18995.0,
+      "mean_price": 19452.68
+    },
+    "bmw": {
+      "count": 12524,
+      "median_price": 32990.0,
+      "mean_price": 36869.13
+    },
+    "ram": {
+      "count": 11259,
+      "median_price": 42688.0,
+      "mean_price": 44047.17
+    },
+    "mercedes-benz": {
+      "count": 10407,
+      "median_price": 34995.0,
+      "mean_price": 41834.05
+    },
+    "gmc": {
+      "count": 9069,
+      "median_price": 33790.0,
+      "mean_price": 35297.58
+    },
+    "subaru": {
+      "count": 7749,
+      "median_price": 20995.0,
+      "mean_price": 21639.47
+    },
+    "audi": {
+      "count": 7222,
+      "median_price": 31797.5,
+      "mean_price": 35505.03
+    },
+    "mitsubishi": {
+      "count": 6477,
+      "median_price": 19995.0,
+      "mean_price": 19729.13
+    },
+    "acura": {
+      "count": 4904,
+      "median_price": 26900.0,
+      "mean_price": 27735.08
+    },
+    "buick": {
+      "count": 4394,
+      "median_price": 19995.0,
+      "mean_price": 21318.16
+    }
+  },
+  "price_by_province": {
+    "on": {
+      "count": 114217,
+      "median_price": 21990.0,
+      "mean_price": 26301.76
+    },
+    "qc": {
+      "count": 90302,
+      "median_price": 17983.5,
+      "mean_price": 21571.14
+    },
+    "ab": {
+      "count": 52647,
+      "median_price": 25900.0,
+      "mean_price": 29700.17
+    },
+    "bc": {
+      "count": 44957,
+      "median_price": 25768.0,
+      "mean_price": 30667.61
+    },
+    "sk": {
+      "count": 15358,
+      "median_price": 25237.0,
+      "mean_price": 27987.17
+    },
+    "ns": {
+      "count": 12331,
+      "median_price": 19955.0,
+      "mean_price": 22275.15
+    },
+    "mb": {
+      "count": 9923,
+      "median_price": 24991.0,
+      "mean_price": 27179.0
+    },
+    "nb": {
+      "count": 6112,
+      "median_price": 19895.0,
+      "mean_price": 23324.52
+    },
+    "nl": {
+      "count": 4488,
+      "median_price": 19995.0,
+      "mean_price": 22842.95
+    },
+    "pe": {
+      "count": 1345,
+      "median_price": 17988.0,
+      "mean_price": 20446.73
+    },
+    "nt": {
+      "count": 47,
+      "median_price": 30995.0,
+      "mean_price": 33369.77
+    },
+    "yt": {
+      "count": 38,
+      "median_price": 22695.0,
+      "mean_price": 23310.79
+    }
+  },
+  "price_by_body_type": {
+    "suv": {
+      "count": 147877,
+      "median_price": 24995.0,
+      "mean_price": 28277.86
+    },
+    "sedan": {
+      "count": 83459,
+      "median_price": 15983.0,
+      "mean_price": 18552.17
+    },
+    "hatchback": {
+      "count": 34724,
+      "median_price": 15998.0,
+      "mean_price": 18075.67
+    },
+    "pickup": {
+      "count": 33257,
+      "median_price": 39995.0,
+      "mean_price": 41053.86
+    },
+    "minivan": {
+      "count": 11189,
+      "median_price": 18987.0,
+      "mean_price": 20210.31
+    },
+    "coupe": {
+      "count": 7086,
+      "median_price": 29995.0,
+      "mean_price": 43882.1
+    },
+    "wagon": {
+      "count": 2708,
+      "median_price": 19995.0,
+      "mean_price": 21669.16
+    },
+    "convertible": {
+      "count": 2438,
+      "median_price": 32995.0,
+      "mean_price": 51733.57
+    },
+    "cargo van": {
+      "count": 1934,
+      "median_price": 36995.0,
+      "mean_price": 33493.06
+    },
+    "mini mpv": {
+      "count": 766,
+      "median_price": 10947.5,
+      "mean_price": 11251.96
+    },
+    "passenger van": {
+      "count": 659,
+      "median_price": 30998.0,
+      "mean_price": 31905.53
+    },
+    "micro car": {
+      "count": 314,
+      "median_price": 7995.0,
+      "mean_price": 8972.35
+    },
+    "cutaway": {
+      "count": 287,
+      "median_price": 39995.0,
+      "mean_price": 38156.55
+    },
+    "targa": {
+      "count": 252,
+      "median_price": 79989.5,
+      "mean_price": 85470.79
+    },
+    "van": {
+      "count": 242,
+      "median_price": 30695.0,
+      "mean_price": 33291.4
+    },
+    "chassis cab": {
+      "count": 158,
+      "median_price": 64449.0,
+      "mean_price": 56918.16
+    },
+    "crossover": {
+      "count": 139,
+      "median_price": 23494.0,
+      "mean_price": 23037.09
+    },
+    "car van": {
+      "count": 138,
+      "median_price": 16993.0,
+      "mean_price": 17834.21
+    },
+    "combi": {
+      "count": 68,
+      "median_price": 28735.5,
+      "mean_price": 31377.41
+    }
+  },
+  "error_by_make": {
+    "ferrari": {
+      "count": 38,
+      "mae": 32102.43,
+      "median_abs_pct_error": 7.36
+    },
+    "porsche": {
+      "count": 278,
+      "mae": 11195.66,
+      "median_abs_pct_error": 6.18
+    },
+    "maserati": {
+      "count": 44,
+      "mae": 6321.07,
+      "median_abs_pct_error": 5.82
+    },
+    "tesla": {
+      "count": 126,
+      "mae": 4843.09,
+      "median_abs_pct_error": 4.22
+    },
+    "mercedes-benz": {
+      "count": 2036,
+      "mae": 4812.89,
+      "median_abs_pct_error": 6.02
+    },
+    "land rover": {
+      "count": 570,
+      "mae": 4465.54,
+      "median_abs_pct_error": 5.64
+    },
+    "suzuki": {
+      "count": 37,
+      "mae": 3881.71,
+      "median_abs_pct_error": 20.64
+    },
+    "jaguar": {
+      "count": 312,
+      "mae": 3453.96,
+      "median_abs_pct_error": 5.05
+    },
+    "audi": {
+      "count": 1472,
+      "mae": 3254.96,
+      "median_abs_pct_error": 5.82
+    },
+    "genesis": {
+      "count": 47,
+      "mae": 3064.61,
+      "median_abs_pct_error": 4.46
+    },
+    "ram": {
+      "count": 2164,
+      "mae": 2924.23,
+      "median_abs_pct_error": 4.88
+    },
+    "volvo": {
+      "count": 342,
+      "mae": 2714.55,
+      "median_abs_pct_error": 5.87
+    },
+    "pontiac": {
+      "count": 67,
+      "mae": 2403.54,
+      "median_abs_pct_error": 21.3
+    },
+    "bmw": {
+      "count": 2497,
+      "mae": 2395.0,
+      "median_abs_pct_error": 4.78
+    },
+    "cadillac": {
+      "count": 523,
+      "mae": 2212.24,
+      "median_abs_pct_error": 4.48
+    },
+    "lexus": {
+      "count": 808,
+      "mae": 2159.36,
+      "median_abs_pct_error": 4.71
+    },
+    "gmc": {
+      "count": 1755,
+      "mae": 2071.05,
+      "median_abs_pct_error": 4.04
+    },
+    "infiniti": {
+      "count": 782,
+      "mae": 2054.11,
+      "median_abs_pct_error": 4.72
+    },
+    "ford": {
+      "count": 7158,
+      "mae": 2030.29,
+      "median_abs_pct_error": 5.17
+    },
+    "jeep": {
+      "count": 3055,
+      "mae": 2003.29,
+      "median_abs_pct_error": 4.52
+    }
+  },
+  "error_by_province": {
+    "bc": {
+      "count": 9093,
+      "mae": 2234.41,
+      "median_abs_pct_error": 5.45
+    },
+    "ab": {
+      "count": 10578,
+      "mae": 2148.75,
+      "median_abs_pct_error": 5.13
+    },
+    "on": {
+      "count": 22579,
+      "mae": 1971.21,
+      "median_abs_pct_error": 5.09
+    },
+    "mb": {
+      "count": 1984,
+      "mae": 1811.31,
+      "median_abs_pct_error": 4.85
+    },
+    "nb": {
+      "count": 1206,
+      "mae": 1773.05,
+      "median_abs_pct_error": 5.4
+    },
+    "qc": {
+      "count": 18216,
+      "mae": 1640.55,
+      "median_abs_pct_error": 4.85
+    },
+    "sk": {
+      "count": 3066,
+      "mae": 1411.42,
+      "median_abs_pct_error": 3.22
+    },
+    "ns": {
+      "count": 2504,
+      "mae": 1391.0,
+      "median_abs_pct_error": 4.52
+    },
+    "pe": {
+      "count": 260,
+      "mae": 1356.14,
+      "median_abs_pct_error": 4.67
+    },
+    "nl": {
+      "count": 846,
+      "mae": 1115.72,
+      "median_abs_pct_error": 3.69
+    }
+  },
+  "error_by_car_age_bucket": {
+    "15+ yrs": {
+      "count": 3658,
+      "mae": 2605.14,
+      "median_abs_pct_error": 15.51
+    },
+    "4-6 yrs": {
+      "count": 9176,
+      "mae": 2327.61,
+      "median_abs_pct_error": 3.75
+    },
+    "7-10 yrs": {
+      "count": 43576,
+      "mae": 1822.93,
+      "median_abs_pct_error": 4.34
+    },
+    "11-15 yrs": {
+      "count": 15277,
+      "mae": 1670.26,
+      "median_abs_pct_error": 7.62
+    }
+  }
+}

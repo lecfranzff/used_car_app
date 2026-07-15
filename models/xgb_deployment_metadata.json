@@ -1,0 +1,54 @@
+{
+  "expected_columns": [
+    "miles",
+    "year",
+    "make",
+    "body_type",
+    "vehicle_type",
+    "drivetrain",
+    "transmission",
+    "fuel_type",
+    "engine_size",
+    "engine_block",
+    "city",
+    "province",
+    "miles_was_zero",
+    "car_age",
+    "miles_per_year",
+    "model_trim",
+    "region"
+  ],
+  "final_params": {
+    "colsample_bytree": 1.0,
+    "gamma": 0,
+    "max_depth": 10,
+    "min_child_weight": 5,
+    "subsample": 1.0,
+    "reg_alpha": 0,
+    "reg_lambda": 0.1,
+    "learning_rate": 0.1,
+    "n_estimators": 2000
+  },
+  "test_metrics": {
+    "MAE": 1893.0420467787462,
+    "R2": 0.9461873308450931,
+    "RMSE": 4701.437898169292
+  },
+  "accuracy_bands": {
+    "within_1000_pct": 48.197023170170326,
+    "within_2500_pct": 79.66297934074518,
+    "within_5000_pct": 93.4255862290234,
+    "within_10_percent_pct": 74.7666941007435,
+    "within_20_percent_pct": 91.34013140457824
+  },
+  "artifact_size_mb": 17.27,
+  "library_versions": {
+    "python": "3.14.5",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "scikit-learn": "1.8.0",
+    "xgboost": "3.3.0",
+    "joblib": "1.5.3",
+    "pyarrow": "23.0.1"
+  }
+}
