@@ -39,7 +39,12 @@ def hbar(df, *, value, color, x_title, tooltip, x_format="$,.0f", sort="-x", hei
         .mark_bar(color=color, cornerRadiusEnd=4, size=height_per - 9)
         .encode(
             x=alt.X(f"{value}:Q", title=x_title, axis=alt.Axis(format=x_format)),
-            y=alt.Y("name:N", sort=sort, title=None, axis=alt.Axis(labelLimit=180)),
+            y=alt.Y(
+                "name:N", sort=sort, title=None,
+                # labelOverlap=False stops Vega-Lite from thinning out labels (which
+                # otherwise hides every other province/category); every bar keeps its label.
+                axis=alt.Axis(labelLimit=180, labelOverlap=False),
+            ),
             tooltip=tooltip,
         )
         .properties(height=height)

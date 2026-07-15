@@ -24,6 +24,10 @@ OPTIONS_PATH = ROOT / "models" / "form_options.json"
 # the ages I feed the model match training and don't shift when the year rolls over.
 REFERENCE_YEAR = 2026
 
+# The training listings top out at model year 2022 (dataset year.max). Anything newer
+# is outside what the model actually saw, so we default here and warn past it.
+MAX_TRAINED_YEAR = 2022
+
 # Fallbacks for the fields someone might leave blank. "unknown unknown" is what the
 # model saw when both model and trim were missing; "unknown" is what empty
 # region/city values were filled with during training.
@@ -134,7 +138,11 @@ def _titlecase_or_sentinel(value):
 # the estimate recompute on each change, which is cheap since the model is cached.
 c1, c2, c3 = st.columns(3)
 with c1:
-    year = st.number_input("Year", min_value=1981, max_value=REFERENCE_YEAR, value=2018, step=1)
+    year = st.number_input(
+        "Year", min_value=1981, max_value=REFERENCE_YEAR, value=MAX_TRAINED_YEAR, step=1,
+        help=f"The model was trained on listings up to model year {MAX_TRAINED_YEAR}; "
+             "newer years are extrapolated.",
+    )
     make = st.selectbox("Make", low["make"], format_func=str.title)
     model_trim_choice = st.selectbox(
         "Model & trim", [NOT_LISTED] + make_trims.get(make, []),
@@ -182,6 +190,12 @@ low_band = max(0.0, price - MAE)
 high_band = price + MAE
 
 st.divider()
+if year > MAX_TRAINED_YEAR:
+    st.warning(
+        f"ℹ️ This model was trained on listings up to model year {MAX_TRAINED_YEAR}. "
+        f"A {int(year)} vehicle is beyond the training data, so this estimate is an "
+        "extrapolation and may be less reliable."
+    )
 st.metric("Estimated price", f"${price:,.0f}")
 st.caption(
     f"Likely range **${low_band:,.0f} – ${high_band:,.0f}** (±${MAE:,.0f} average error) · "
