@@ -1,10 +1,10 @@
 # Used Car Market Value Predictor
 
-A machine learning project that estimates used car prices from vehicle features, deployed as a live [Streamlit](https://streamlit.io) web app. The primary focus is the end-to-end ML workflow: cleaning a large, messy listings dataset, engineering features, building a leakage-safe preprocessing pipeline, tuning a gradient-boosted model, and exporting an artifact small enough to actually deploy on a memory-constrained host.
+A machine learning project that estimates used car prices from vehicle features, deployed as a live [Streamlit](https://streamlit.io) web app. The primary focus is the end-to-end ML workflow: cleaning a large, messy listings dataset, engineering features, building a leakage-safe preprocessing pipeline, tuning a gradient-boosted model, and exporting an artifact small enough to actually deploy on a memory-constrained host. This is a research-focused project centred on model training and evaluation methodology rather than a production pricing service.
 
-**Live app:** deployed on Streamlit Community Cloud — [https://usedcarapp.streamlit.app/]
+**Live app:** deployed on Streamlit Community Cloud — [Used Car App](https://usedcarapp.streamlit.app/)
 
-Based on Kaggle Data [marketcheck-automotive-data-us-canada](https://www.kaggle.com/datasets/rupeshraundal/marketcheck-automotive-data-us-canada/data?select=ca-dealers-used.csv)
+Based on Kaggle Data — [marketcheck-automotive-data-us-canada](https://www.kaggle.com/datasets/rupeshraundal/marketcheck-automotive-data-us-canada/data?select=ca-dealers-used.csv)
 
 ## Project Overview
 
@@ -31,7 +31,7 @@ Accuracy bands (share of test listings within a given error):
 | ±10% | 74.8% |
 | ±20% | 91.3% |
 
-The model is proportionally **weakest on cheap cars** (larger percentage error at the low end), **luxury/exotic makes** (Ferrari, Porsche, Maserati), and **cars 15+ years old**. It is strongest on mainstream 4–10 year-old vehicles. The residual gap is dominated by price variance the feature set cannot capture — condition, accident history, and seller motivation are not in the data.
+The model is proportionally **weakest on cheap cars** (larger percentage error at the low end), **luxury/exotic makes** (Ferrari, Porsche, Maserati), and **cars 15+ years old**. It is strongest on mainstream 4–10 year-old vehicles. The residual gap is dominated by price variance the feature set cannot capture — condition, accident history, and seller motivation are not in the data. A further limitation is data vintage: these listings were scraped in 2022, so the model reflects that market and its absolute price levels should not be read as current.
 
 ## Machine Learning Workflow
 
@@ -136,3 +136,4 @@ Reproducing the model from scratch additionally requires the source data and the
 - [x] Explore page: price-distribution and segment charts from the precomputed aggregates
 - [x] Model-info page: metrics, accuracy bands, and an honest account of the model's weak spots
 - [ ] Segment-specific ranges (make / vehicle-age) in place of the flat ±MAE band
+- [ ] Web-scrape newer listings through 2026 to refresh the 2022-vintage training data and retrain
