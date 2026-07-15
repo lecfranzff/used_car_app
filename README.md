@@ -3,7 +3,7 @@
 A machine learning project that estimates used car prices from vehicle features, deployed as a live [Streamlit](https://streamlit.io) web app. The primary focus is the end-to-end ML workflow: cleaning a large, messy listings dataset, engineering features, building a leakage-safe preprocessing pipeline, tuning a gradient-boosted model, and exporting an artifact small enough to actually deploy on a memory-constrained host.
 
 **Live app:** deployed on Streamlit Community Cloud — [https://usedcarapp.streamlit.app/]
-Based on Kaggle Data [https://www.kaggle.com/datasets/rupeshraundal/marketcheck-automotive-data-us-canada/data?select=ca-dealers-used.csv]
+Based on Kaggle Data [marketcheck-automotive-data-us-canada](https://www.kaggle.com/datasets/rupeshraundal/marketcheck-automotive-data-us-canada/data?select=ca-dealers-used.csv)
 
 ## Project Overview
 
