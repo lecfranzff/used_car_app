@@ -74,9 +74,11 @@ with col_a:
     )
 with col_b:
     st.subheader("By province")
+    # Taller bands (height_per) so all 12 provinces get an axis label and the chart
+    # fills the space next to the taller body-type chart instead of clipping the last one.
     st.altair_chart(
         hbar(price_df("price_by_province"), value="median", color=BLUE,
-             x_title="Median price ($)", tooltip=PRICE_TT),
+             x_title="Median price ($)", tooltip=PRICE_TT, height_per=40),
         width="stretch",
     )
 
