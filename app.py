@@ -154,6 +154,7 @@ st.write(
 low = OPTIONS["low_cardinality"]
 make_trims = OPTIONS["make_to_model_trims"]
 prov_cities = OPTIONS["province_to_cities"]
+FUEL_DISPLAY_TO_RAW = _fuel_display_map(low["fuel_type"])
 NOT_LISTED = "— not sure / not listed —"
 
 
@@ -179,7 +180,7 @@ with c1:
 with c2:
     miles = st.number_input("Mileage (mi)", min_value=0, max_value=500_000, value=60_000, step=1_000)
     body_type = st.selectbox("Body type", low["body_type"], format_func=str.title)
-    fuel_type = st.selectbox("Fuel type", low["fuel_type"], format_func=str.title)
+    fuel_choice = st.selectbox("Fuel type", list(FUEL_DISPLAY_TO_RAW))
 with c3:
     engine_size = st.number_input("Engine size (L) — 0 if unknown", min_value=0.0, max_value=10.0, value=2.4, step=0.1)
     transmission = st.selectbox("Transmission", low["transmission"], format_func=str.title)
@@ -202,6 +203,7 @@ with c6:
     )
 
 # turn the dropdown picks into the values the model was trained on
+fuel_type = FUEL_DISPLAY_TO_RAW[fuel_choice]
 model_trim = DEFAULT_MODEL_TRIM if model_trim_choice == NOT_LISTED else model_trim_choice
 city = DEFAULT_CITY if city_choice == NOT_LISTED else city_choice
 postal_clean = postal.strip().lower()
