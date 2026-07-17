@@ -8,6 +8,7 @@ model was trained.
 """
 from pathlib import Path
 import json
+import re
 
 import numpy as np
 import pandas as pd
@@ -55,6 +56,33 @@ OPTIONS = load_json(OPTIONS_PATH)
 EXPECTED_COLUMNS = META["expected_columns"]
 MAE = float(META["test_metrics"]["MAE"])
 pipe = load_pipeline()
+
+
+# The raw data labels multi-engine listings with several fuels joined by "/" or ";",
+# inconsistently, so "premium unleaded / unleaded" and "premium unleaded; unleaded" are
+# the same real-world category split in two. These helpers collapse such duplicates for
+# the dropdown while keeping a path back to the exact strings the model was trained on.
+def _fuel_key(value):
+    """Delimiter- and order-agnostic key: the set of fuels named in the string."""
+    parts = re.split(r"\s*[/;]\s*", value.strip())
+    return tuple(sorted({p for p in parts if p}))
+
+
+def _fuel_display_map(raw_values):
+    """Map one clean display label -> one raw fuel string the model actually saw.
+
+    The fitted OneHotEncoder only knows the original raw strings; a merged label would
+    hit handle_unknown="ignore" and zero out the whole fuel_type encoding. So each group
+    of equivalent strings resolves to a single canonical member (alphabetically first).
+    """
+    groups = {}
+    for value in raw_values:
+        groups.setdefault(_fuel_key(value), []).append(value)
+    display_to_raw = {
+        " / ".join(part.title() for part in key): min(members)
+        for key, members in groups.items()
+    }
+    return dict(sorted(display_to_raw.items()))
 
 
 def build_feature_row(raw: dict) -> pd.DataFrame:
